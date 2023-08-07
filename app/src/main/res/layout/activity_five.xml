@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <EditText
+                android:id="@+id/et_first_name"
+                android:layout_width="180dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/input_bg"
+                android:hint="First name"
+                android:imeOptions="actionNext"
+                android:lines="3"
+                android:padding="8dp"
+                android:singleLine="true" />
+
+            <EditText
+                android:id="@+id/et_last_name"
+                android:layout_width="180dp"
+                android:layout_height="wrap_content"
+                android:hint="Last name"
+                android:imeOptions="actionNext"
+                android:maxLines="1"
+                android:singleLine="true" />
+
+            <EditText
+                android:id="@+id/et_password"
+                android:layout_width="180dp"
+                android:layout_height="wrap_content"
+                android:hint="Password"
+                android:imeOptions="actionNext"
+                android:inputType="textPassword"
+                android:lines="10" />
+
+            <EditText
+                android:id="@+id/et_phone"
+                android:layout_width="180dp"
+                android:layout_height="wrap_content"
+                android:hint="Phone"
+                android:imeOptions="actionDone"
+                android:inputType="number"
+                android:maxLines="1"
+                android:singleLine="true" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Расмий эълонда шартнома бериш фақат янги комплектациялар учун тиклангани айтилган. UzAuto Motors матбуот хизмати Kun.uz саволига жавобан бунга қадар мавжуд бўлган комплектациялар сотуви ҳам ўзгармаган нархлар асосида бошланганини билдирди.
+
+Таъкидланишича, UzAuto Motors ишлаб чиқариш линияларида амалга оширилган модернизация ишлари, шунингдек завод фаолияти самарадорлигининг ошиши ҳисобига 2023 йилда қўшимча 50 000 дона автомобил ишлаб чиқариш имкони яратилган.
+
+“Автомобилларни етказиб бериш муддатини қисқартириш мақсадида компания ишлаб чиқариш жадвалига мувофиқ савдо тизимини жорий этмоқда”, дея қайд этилган автокорхона эълонида.
+
+Эслатиб ўтамиз, Cobalt ва Lacetti сотуви 2022 йил 8 декабрдан, Damas ва Labo сотуви эса 13 декабрдан бошлаб тўхтатилган эди."
+                android:textSize="26sp" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_save"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/gradient_bg"
+        android:text="SAVE" />
+</LinearLayout>
