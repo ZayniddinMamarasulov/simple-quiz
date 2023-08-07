@@ -101,6 +101,7 @@ public class SecondActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 btnNext.setVisibility(View.GONE);
+
                 btnBack.setVisibility(View.GONE);
                 radioGroup.setVisibility(View.GONE);
                 questionText.setVisibility(View.GONE);
