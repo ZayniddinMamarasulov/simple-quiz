@@ -1,6 +1,7 @@
 package uz.tune.lesson1;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.AppCompatImageView;
 
 import android.os.Bundle;
 import android.text.Editable;
@@ -11,26 +12,35 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Toast;
 
+import com.bumptech.glide.Glide;
+import com.bumptech.glide.load.resource.bitmap.CenterInside;
+import com.bumptech.glide.load.resource.bitmap.RoundedCorners;
+
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
     ImageView ivNext;
     ImageView ivFood;
     EditText etFirstName;
-    Button btnSave;
+    AppCompatImageView btnBack;
+    AppCompatImageView ivProfile;
     String firstName;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_five);
+        setContentView(R.layout.activity_profile);
 
 //        ivNext = findViewById(R.id.iv_next);
 //        ivFood = findViewById(R.id.iv_food);
 //
 
-        etFirstName = findViewById(R.id.et_first_name);
-        btnSave = findViewById(R.id.btn_save);
+//        etFirstName = findViewById(R.id.et_first_name);
+        btnBack = findViewById(R.id.btn_back);
+        ivProfile = findViewById(R.id.iv_profile1);
+
+        Glide.with(this)
+                .load("https://picsum.photos/id/100/200/300")
+                .into(ivProfile);
 
         clicks();
     }
@@ -38,18 +48,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private void clicks() {
 //        ivNext.setOnClickListener(this);
 //        ivFood.setOnClickListener(this);
-        btnSave.setOnClickListener(this);
+        btnBack.setOnClickListener(this);
     }
 
     @Override
     public void onClick(View view) {
         int id = view.getId();
-        if (id == R.id.iv_food) {
-            Toast.makeText(this, "food bosildi", Toast.LENGTH_SHORT).show();
-        } else if (id == R.id.iv_next) {
-            Toast.makeText(this, "next bosildi", Toast.LENGTH_SHORT).show();
-        } else if (id == R.id.btn_save) {
-            Toast.makeText(this, etFirstName.getText(), Toast.LENGTH_SHORT).show();
+        if (id == R.id.btn_back) {
+            Toast.makeText(this, "back bosildi", Toast.LENGTH_SHORT).show();
         }
     }
 }
